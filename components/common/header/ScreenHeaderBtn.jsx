@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 
 import styles from './screenheader.style'
 
-const ScreenHeaderBtn = () => {
+const ScreenHeaderBtn = ({iconUrl, dimension}) => {
   return (
     <View>
       <Text>ScreenHeaderBtn</Text>
