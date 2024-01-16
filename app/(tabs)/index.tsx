@@ -46,7 +46,7 @@ export default function Home() {
         </View>
       </ScrollView>
     </SafeAreaView>
-    // 32:00
+    // 52:00
   );
 }
 
