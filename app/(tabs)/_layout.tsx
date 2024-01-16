@@ -1,8 +1,12 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Link, Tabs } from "expo-router";
-import { Pressable, useColorScheme } from "react-native";
+import { Link, Stack, Tabs } from "expo-router";
+import { Pressable, SafeAreaView, useColorScheme } from "react-native";
 
 import Colors from "../../constants/Colors";
+import Home from ".";
+import { View } from "../../components/Themed";
+import { ScreenHeaderBtn } from "../../components";
+import { COLORS, icons, images, SIZES } from "../../constants";
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -17,17 +21,48 @@ function TabBarIcon(props: {
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
+  // return (
+  //   <SafeAreaView
+  //     style={{
+  //       flex: 1,
+  //       backgroundColor: COLORS.lightWhite,
+  //     }}
+  //   >
+  //     <Stack.Screen
+  //       options={{
+  //         headerStyle: { backgroundColor: COLORS.primary },
+  //         headerShadowVisible: false,
+  //         headerLeft: () => (
+  //           <ScreenHeaderBtn
+  //             iconUrl={icons.menu}
+  //             dimension="60%"
+  //             handlePress={() => ""}
+  //           />
+  //         ),
+  //         headerRight: () => (
+  //           <ScreenHeaderBtn
+  //             iconUrl={images.profile}
+  //             dimension="100%"
+  //             handlePress={() => ""}
+  //           />
+  //         ),
+  //       }}
+  //     ></Stack.Screen>
+  //     <Home />
+  //   </SafeAreaView>
+  // );
+
   return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
       }}
     >
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          // tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           // headerRight: () => (
           //   <Link href="/modal" asChild>
           //     <Pressable>
@@ -43,7 +78,7 @@ export default function TabLayout() {
           //   </Link>
           // ),
         }}
-      />
+      /> */}
     </Tabs>
   );
 }
