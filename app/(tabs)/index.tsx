@@ -1,7 +1,7 @@
 import { StyleSheet, View, ScrollView, SafeAreaView, Text } from "react-native";
 import { useState } from "react";
 import { COLORS, icons, images, SIZES } from "../../constants";
-import { Stack } from "expo-router";
+import { Link, Stack } from "expo-router";
 import {
   Nearbyjobs,
   Popularjobs,
@@ -41,6 +41,18 @@ export default function Home() {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1, padding: SIZES.medium }}>
           <Welcome />
+          <Link href={`/(tabs)/test`}>
+            <Text
+              style={{
+                fontSize: 36,
+                backgroundColor: "red",
+                padding: 8,
+                marginTop: 12,
+              }}
+            >
+              Go to job detail
+            </Text>
+          </Link>
           <Popularjobs />
           <Nearbyjobs />
         </View>

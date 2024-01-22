@@ -54,10 +54,13 @@ export default function TabLayout() {
 
   return (
     <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-      }}
+    // replaced Tab with stack.
+    // screenOptions={{
+    //   tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+    // }}
     >
+      <Tabs.Screen name="index"></Tabs.Screen>
+      <Tabs.Screen name="test"></Tabs.Screen>
       {/* <Tabs.Screen
         name="index"
         options={{
